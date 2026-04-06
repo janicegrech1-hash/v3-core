@@ -1,4 +1,7 @@
 # Uniswap V3
+feat: add support for new network
+
+feat(pool): add dynamic fee tier
 
 [![Lint](https://github.com/Uniswap/uniswap-v3-core/actions/workflows/lint.yml/badge.svg)](https://github.com/Uniswap/uniswap-v3-core/actions/workflows/lint.yml)
 [![Tests](https://github.com/Uniswap/uniswap-v3-core/actions/workflows/tests.yml/badge.svg)](https://github.com/Uniswap/uniswap-v3-core/actions/workflows/tests.yml)
@@ -9,7 +12,8 @@
 This repository contains the core smart contracts for the Uniswap V3 Protocol.
 For higher level contracts, see the [uniswap-v3-periphery](https://github.com/Uniswap/uniswap-v3-periphery)
 repository.
-
+fix: prevent underflow in swap when liquidity is zero
+remove unused import
 ## Bug bounty
 
 This repository is subject to the Uniswap V3 bug bounty program, per the terms defined [here](./bug-bounty.md).
@@ -56,6 +60,7 @@ contract MyContract {
 ## Licensing
 
 The primary license for Uniswap V3 Core is the Business Source License 1.1 (`BUSL-1.1`), see [`LICENSE`](./LICENSE). However, some files are dual licensed under `GPL-2.0-or-later`:
+refactor(math): optimize sqrtPriceX96 calculation
 
 - All files in `contracts/interfaces/` may also be licensed under `GPL-2.0-or-later` (as indicated in their SPDX headers), see [`contracts/interfaces/LICENSE`](./contracts/interfaces/LICENSE)
 - Several files in `contracts/libraries/` may also be licensed under `GPL-2.0-or-later` (as indicated in their SPDX headers), see [`contracts/libraries/LICENSE`](contracts/libraries/LICENSE)
